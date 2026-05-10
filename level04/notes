@@ -1,0 +1,9 @@
+# change directory to ~/inhere
+cd ~/inhere
+
+# get the only file with the human-readable content out of all the files:
+# find all regular files and then execute file command on all of them (single command), and then filter out files with non human-readable content
+find . -type f -exec file {} + | grep "text"
+
+# get password to next level (./-file07)
+cat ./-file07

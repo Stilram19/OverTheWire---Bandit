@@ -1,0 +1,6 @@
+# since find lacks permission to read lots of files in the system, there will be a storm of errors in the console
+# so we redirect standard error to /dev/null to have clean output
+find / -type f -size 33c -user bandit7 -group bandit6 2>/dev/null
+
+# get password
+cat /var/lib/dpkg/info/bandit7.password

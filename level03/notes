@@ -1,0 +1,8 @@
+# enter the directory '~/inhere'
+cd ~/inhere
+
+# list all files (including hidden files)
+ls -la
+
+# cat the hidden file
+cat ...Hiding-From-You

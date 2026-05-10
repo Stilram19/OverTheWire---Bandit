@@ -1,0 +1,12 @@
+# change directory to ~/inhere
+cd ~/inhere
+
+# first method:
+
+find . -type f ! -executable -size 1033c -exec file {} +
+# and you'll get the file
+
+# second method:
+
+find . -type f -exec du -b {} + | grep 1033
+# and you'll get the file
