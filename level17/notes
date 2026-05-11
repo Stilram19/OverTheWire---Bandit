@@ -1,0 +1,2 @@
+# the line with '<' is the new password (the only line in passwords.new that is not in passwords.old)
+diff passwords.new passwords.old

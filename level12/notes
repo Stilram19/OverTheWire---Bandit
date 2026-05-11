@@ -1,0 +1,50 @@
+# create a file in /tmp
+cd /tmp
+mktemp -d # in my case: /tmp/tmp.elqExIn78p
+
+# change directory
+cd /tmp/tmp.elqExIn78p
+
+# copy hexa dump file into my working directory
+cp ~/data.txt data
+
+# convert hexadecimal dump back to binary
+xxd -r data data.bin
+
+# check file type
+file data.bin # gzip compression
+
+# rename file to include .gz extension 
+mv data.bin data.gz
+
+# decompress
+gzip -d data.gz # output file is 'data'
+
+# check file type
+file data # bzip2
+
+# rename file to include .bz2 extension
+mv data data.bz2 # output file is 'data'
+
+# decompress
+bzip2 -d data.bz2
+
+# check file type
+file data # gzip compression
+
+# rename file to include .gz extension
+mv data data.gz
+
+# decompress
+gzip -d data.gz # output 'data'
+
+# check file type
+file data # tar archive
+
+# rename
+mv data data.tar
+
+# decompress
+tar -xf data.tar
+
+# you keep checking file type, renaming to match extension, decompress and repeat until you find file type text ASCII

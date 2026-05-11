@@ -1,0 +1,7 @@
+# scan open ports in the range [31000-32000]
+nmap -p31000-32000 localhost
+
+# then test each open port with openssl client
+openssl s_client -connect localhost:<port> -ign_eof
+
+# if connected successfully and you send the current password and you get a different password (not an echo), that's the password to the next level

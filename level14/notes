@@ -1,0 +1,7 @@
+# copy current password
+cat /etc/bandit_pass/bandit14
+
+# connect to localhost:30000
+nc localhost 30000
+
+# send current password to get password to next level

@@ -1,0 +1,2 @@
+# connect to localhost:30001 with TLS and then send the current password to unlock next level
+openssl s_client -connect localhost:30001 -ign_eof

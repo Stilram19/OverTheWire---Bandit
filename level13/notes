@@ -1,0 +1,11 @@
+# exit the session first
+exit
+
+# in your local machine transfer the private key to local machine
+scp -P 2220 bandit13@bandit.labs.overthewire.org:~/sshkey.private ./bandit14.key
+
+# set correct permissions (no one but you, should have read/write permissions):
+chmod 600 ./bandit14.key
+
+# connect to next level using the ssh private key instead of password
+ssh bandit14@bandit.labs.overthewire.org -p 2220 -i ./bandit14.key
