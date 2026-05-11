@@ -1,0 +1,2 @@
+echo <current password> | nc -l -p 33333 &
+./suconnect 33333

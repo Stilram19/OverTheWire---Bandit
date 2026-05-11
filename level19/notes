@@ -1,0 +1,5 @@
+# run the following command and you'll find out that setuid bit is set for bandit20-do
+ls -l
+
+# bandit20-do just executes the command passed in as arguments
+./bandit20-do cat /etc/bandit_pass/bandit20
